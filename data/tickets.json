@@ -1,0 +1,29 @@
+[
+  {
+    "id": 101,
+    "title": "WiFi down in library",
+    "description": "No connection on 2nd floor",
+    "priority": "high",
+    "status": "resolved",
+    "assigned_to": "ina",
+    "created_at": "2026-10-09 10:00:00"
+  },
+  {
+    "id": 102,
+    "title": "Lab PC monitor flickering",
+    "description": "Screen blinks continuously",
+    "priority": "medium",
+    "status": "open",
+    "assigned_to": null,
+    "created_at": "2026-10-09 10:15:00"
+  },
+  {
+    "id": 103,
+    "title": "Need Python IDE installed",
+    "description": "Software request for CS class",
+    "priority": "low",
+    "status": "open",
+    "assigned_to": null,
+    "created_at": "2026-10-09 10:30:00"
+  }
+]

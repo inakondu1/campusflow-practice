@@ -36,7 +36,7 @@ def main():
                     print(f"[{t.get("id")}] {t.get("title")} | Priority: {t.get("priority")} | Status: {t.get("status")} | Assigned: {t.get("assigned_to")}")
 
         elif choice == "3":
-            tid = input("Enter Ticket ID to assign: ").strip().upper()
+            tid = int(input("Enter Ticket ID to assign: ").strip())
             target = next((t for t in tickets if t.get("id") == tid), None)
             if not target:
                 print(f"Error: Ticket '{tid}' not found.")
@@ -50,7 +50,7 @@ def main():
                 print(f"Error: {e}")
 
         elif choice == "4":
-            tid = input("Enter Ticket ID to update: ").strip().upper()
+            tid = int(input("Enter Ticket ID to update: ").strip())
             target = next((t for t in tickets if t.get("id") == tid), None)
             if not target:
                 print(f"Error: Ticket '{tid}' not found.")
