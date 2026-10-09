@@ -1,5 +1,5 @@
 import unittest
-from campusflow.workflow import assign_ticket, update_status
+from campusflow.workflow import assign_ticket, update_status, get_work_queue
 
 class TestWorkflow(unittest.TestCase):
 
@@ -35,6 +35,19 @@ class TestWorkflow(unittest.TestCase):
         
         with self.assertRaises(ValueError):
             update_status(self.ticket, "in_progress")
+
+    def test_work_queue_sorting_by_priority_and_id(self):
+        tickets = [
+            {"id": "T003", "status": "open", "priority": "high"},
+            {"id": "T001", "status": "resolved", "priority": "critical"},
+            {"id": "T002", "status": "open", "priority": "critical"},
+            {"id": "T004", "status": "in_progress", "priority": "high"}
+        ]
+        
+        queue = get_work_queue(tickets)
+        ids = [t["id"] for t in queue]
+        
+        self.assertEqual(ids, ["T002", "T003", "T004"])
 
 if __name__ == "__main__":
     unittest.main()
