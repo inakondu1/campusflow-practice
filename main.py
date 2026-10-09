@@ -1,8 +1,6 @@
 import sys
 import json
-
-# UPDATE THIS LINE to match your grep result:
-from tickets import assign_ticket, update_status
+from campusflow.workflow import assign_ticket, update_status
 
 def main():
     try:
