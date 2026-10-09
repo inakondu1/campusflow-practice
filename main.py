@@ -1,8 +1,8 @@
 import sys
 import json
 
-# Adjust this import to match your find output:
-# from YOUR_MODULE import assign_ticket, update_status
+# UPDATE THIS LINE to match your grep result:
+from tickets import assign_ticket, update_status
 
 def main():
     try:
