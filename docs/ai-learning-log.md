@@ -33,7 +33,7 @@
 - **My initial understanding:** I thought `json.load()` would return `None` or an empty list if a file had invalid syntax.
 - **Prompt to AI:** "What specific exception does json.load() raise when a file contains bad JSON, and how should I catch it?"
 - **Useful AI guidance:** AI clarified that `json.load()` raises `json.JSONDecodeError`, which can be caught and re-raised as a user-friendly `ValueError`.
-- **My independent experiment/test:** Built `test_corrupted_json_raises_value_error` in `tests/test_storage.py` that writes invalid syntax (`"{ invalid...`) to a temp file and asserts that `load_tickets()` raises `ValueError`.
+- **My independent experiment/test:** Built `test_corrupted_json_raises_value_error` in `tests/test_storage.py` that writes invalid syntax to a temp file and asserts that `load_tickets()` raises `ValueError`.
 - **Verification source/result:** Test passed successfully in `test_storage.py`.
 - **Decision:** Accepted and implemented in `campusflow/storage.py`.
 - **Related file/commit:** `campusflow/storage.py`, branch `feat/2-status-workflow`
